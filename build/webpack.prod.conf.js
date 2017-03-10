@@ -9,6 +9,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var PrerenderSpaPlugin = require('prerender-spa-plugin')
+var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 var env = config.build.env
 
@@ -93,7 +94,8 @@ var webpackConfig = merge(baseWebpackConfig, {
       path.join(__dirname, '../dist'),
       // List of routes to prerender
       [ '/' ]
-    )
+    ),
+    new SWPrecacheWebpackPlugin()
   ]
 })
 

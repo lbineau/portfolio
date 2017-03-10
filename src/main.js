@@ -5,6 +5,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+}
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
