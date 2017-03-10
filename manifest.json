@@ -1,11 +1,12 @@
 {
   "background_color": "#ffffff",
-  "name": "Lory Bineau: Senior Frontend developer portfo",
-  "short_name": "Lory Bineau:",
+  "theme_color": "#5586a2",
+  "name": "Lory Bineau: Senior Frontend developer portfolio",
+  "short_name": "Lory Bineau",
   "display": "standalone",
   "icons": [
     {
-      "src": "YOU-NEED-TO-HAVE-A-144-x-144-ICON.png",
+      "src": "ic_launcher.png",
       "sizes": "144x144",
       "type": "image/png"
     }
