@@ -1,8 +1,11 @@
 <template>
-  <div id="app">
-    <h1>Lbineau's portfolio</h1>
+  <article id="app">
+    <div class="title-container">
+      <h1>Lory Bineau: Senior frontend developer</h1>
+      <h2>HTML5, CSS3 (SASS), Javascript (ES6/ES7), VueJS, ...</h2>
+    </div>
     <router-view></router-view>
-  </div>
+  </article>
 </template>
 
 <script>
@@ -19,13 +22,9 @@ html, body {
   height: 100%;
 }
 body {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-direction: column;
   background-color: #5586A2;
 }
-h1, h2, h3 {
+h1 {
   font-family: 'Indie Flower', cursive;
 }
 </style>
@@ -33,6 +32,8 @@ h1, h2, h3 {
 <style lang="scss" scoped>
 #app {
   position: relative;
+  min-height: 100%;
+
   display: flex;
   align-content: center;
   justify-content: center;
@@ -43,17 +44,20 @@ h1, h2, h3 {
   -moz-osx-font-smoothing: grayscale;
 }
 h1 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  font-size: 3em;
-  transform: translateY(-100%);
-  padding-bottom: 1em;
+  margin-bottom: 0.3em;
+  line-height: 1;
+}
+h2 {
+  font-size: 0.8em;
+  margin-top: 0;
+}
+.title-container {
+  font-size: 1.5em;
   text-align: center;
   color: white;
+  padding-bottom: 1em;
   @media (min-width: 480px) {
-    font-size: 5em;
+    font-size: 3em;
   }
 }
 </style>

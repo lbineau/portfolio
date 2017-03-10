@@ -1,7 +1,7 @@
 <template>
   <nav class="hello">
-    <a href="https://github.com/lbineau/"><img src="../assets/icons/github.svg"></a>
-    <a href="https://www.linkedin.com/in/lbineau/"><img src="../assets/icons/linkedin.svg"></a>
+    <a href="https://github.com/lbineau/"><img src="../assets/icons/github.svg" alt="Github"></a>
+    <a href="https://www.linkedin.com/in/lbineau/"><img src="../assets/icons/linkedin.svg" alt="LinkedIn"></a>
   </nav>
 </template>
 
@@ -11,7 +11,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .hello {
   text-align: center;
