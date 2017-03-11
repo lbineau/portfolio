@@ -1,60 +1,10 @@
-<svg id="GitHub" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256" height="256" viewBox="0 0 256 256">
-  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
-   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-      <rdf:Description rdf:about=""/>
-   </rdf:RDF>
-</x:xmpmeta>
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                           
-<?xpacket end="w"?></metadata>
-<defs>
-    <style>
-      .cls-1 {
-        fill: #3f91cb;
-      }
-
-      .cls-2, .cls-3 {
-        fill-rule: evenodd;
-      }
-
-      .cls-2 {
-        opacity: 0.17;
-      }
-
-      .cls-3 {
-        fill: #fff;
-        filter: url(#filter);
-      }
-    </style>
-    <filter id="filter" x="1861" y="2993" width="192" height="192" filterUnits="userSpaceOnUse">
-      <feOffset result="offset" dx="4.243" dy="4.243" in="SourceAlpha"/>
-      <feGaussianBlur result="blur" stdDeviation="3.464"/>
-      <feFlood result="flood" flood-opacity="0.15"/>
-      <feComposite result="composite" operator="in" in2="blur"/>
-      <feBlend result="blend" in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <rect id="Base" class="cls-1" width="256" height="256"/>
-  <path id="Shadow" class="cls-2" d="M1884,3134s-20-77.43,13.14-104.86,77.93-26.93,106.86-11.14l76,76v114H1958.29Z" transform="translate(-1824 -2952)"/>
-  <path id="GitHub_icon" data-name="GitHub icon" class="cls-3" d="M1952.09,3000a84.09,84.09,0,1,1-84.09,84.09A84.092,84.092,0,0,1,1952.09,3000Zm23.88,129.78c0-6.83-3.81-10.85-7.97-13.78,24.93-2.14,34.1-14.34,35.72-32.46,1.32-11.96-.75-21.69-8.07-29.24,3.29-7.43.91-17.62-.74-21.83-5.63-1.66-18.74,5.43-22.4,8.47-7.73-3.07-29.31-4.15-40.81,0-8.15-5.87-17.42-9.5-22.48-8.49-4.66,10.6-1.66,20.62-.75,21.82-6.01,5.63-10.02,17.03-7.93,30.74,3.33,20.12,11.93,28.18,35.46,30.99a12.4,12.4,0,0,0-4.15,7.47c-15.79,6.68-20.31-4.13-22.31-6.95-6.63-8.41-12.58-5.97-12.95-5.83a1.048,1.048,0,0,0-.59.91c0.33,1.82,3.95,3.66,4.12,3.81,4.9,3.74,6.85,10.42,7.82,12.42,8.06,16.17,23.84,6.92,24,7.02,0.01,0.98.06,37.15,0.06,37.15l43.96,0.12S1975.97,3140.34,1975.97,3129.78Z" transform="translate(-1824 -2952)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>github</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="GitHub">
+      <rect id="Base" width="256" height="256" fill="#3f91cb"/>
+      <path id="Shadow" d="M60,182S40,104.57,73.14,77.14,151.07,50.21,180,66l76,76V256H134.29Z" opacity="0.17" style="isolation: isolate"/>
+      <path id="GitHub_icon" data-name="GitHub icon" d="M128.09,48A84.09,84.09,0,1,1,44,132.09,84.09,84.09,0,0,1,128.09,48ZM152,177.78c0-6.83-3.81-10.85-8-13.78,24.93-2.14,34.1-14.34,35.72-32.46,1.32-12-.75-21.69-8.07-29.24,3.29-7.43.91-17.62-.74-21.83-5.63-1.66-18.74,5.43-22.4,8.47-7.73-3.07-29.31-4.15-40.81,0-8.15-5.87-17.42-9.5-22.48-8.49-4.66,10.6-1.66,20.62-.75,21.82-6,5.63-10,17-7.93,30.74,3.33,20.12,11.93,28.18,35.46,31a12.4,12.4,0,0,0-4.15,7.47c-15.79,6.68-20.31-4.13-22.31-6.95-6.63-8.41-12.58-6-12.95-5.83a1,1,0,0,0-.59.91c.33,1.82,3.95,3.66,4.12,3.81,4.9,3.74,6.85,10.42,7.82,12.42,8.06,16.17,23.84,6.92,24,7,0,1,.06,37.15.06,37.15l44,.12S152,188.34,152,177.78Z" fill="#fff"/>
+    </g>
+  </g>
 </svg>

@@ -1,60 +1,10 @@
-<svg id="LinkedIn" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256" height="256" viewBox="0 0 256 256">
-  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
-   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-      <rdf:Description rdf:about=""/>
-   </rdf:RDF>
-</x:xmpmeta>
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                           
-<?xpacket end="w"?></metadata>
-<defs>
-    <style>
-      .cls-1 {
-        fill: #238cc8;
-      }
-
-      .cls-2, .cls-3 {
-        fill-rule: evenodd;
-      }
-
-      .cls-2 {
-        opacity: 0.17;
-      }
-
-      .cls-3 {
-        fill: #fff;
-        filter: url(#filter);
-      }
-    </style>
-    <filter id="filter" x="1485" y="1488" width="191" height="192" filterUnits="userSpaceOnUse">
-      <feOffset result="offset" dx="4.243" dy="4.243" in="SourceAlpha"/>
-      <feGaussianBlur result="blur" stdDeviation="3.464"/>
-      <feFlood result="flood" flood-opacity="0.15"/>
-      <feComposite result="composite" operator="in" in2="blur"/>
-      <feBlend result="blend" in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <rect id="Base" class="cls-1" width="256" height="256"/>
-  <path id="Shadow" class="cls-2" d="M1496,1663.5l30-108.5-26-26,8-21,18-8,48,48,5.75,0.12L1594,1562l50-11,60,60v93H1536.5Z" transform="translate(-1448 -1448)"/>
-  <path id="Linked_In_icon" data-name="Linked In icon" class="cls-3" d="M1532.17,1514.02c0,10.36-7.44,17.98-20.17,17.98-11.97,0-20-7.62-20-17.98,0-10.61,7.99-18.13,20.21-18.13S1531.93,1503.41,1532.17,1514.02Zm-36.23,149.97V1548.06h32.04v115.93h-32.04ZM1552,1548.06h28.58l2.36,12.55c4.73-7.56,17.69-16.61,37.06-16.61,23.62,0,39.95,13.78,39.95,47.77v72.22h-31.9v-67.1c0-14.87-9.2-25.02-22.2-25.02-9.92,0-18.07,6.85-20.67,13.46-0.94,2.35-1.18,5.66-1.18,8.97v69.69h-32V1548.06Z" transform="translate(-1448 -1448)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <title>linkedin</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="LinkedIn">
+      <rect id="Base" width="256" height="256" fill="#238cc8"/>
+      <path id="Shadow" d="M48,215.5,78,107,52,81l8-21,18-8,48,48,5.75.12L146,114l50-11,60,60v93H88.5Z" opacity="0.17" style="isolation: isolate"/>
+      <path id="Linked_In_icon" data-name="Linked In icon" d="M84.17,66c0,10.36-7.44,18-20.17,18-12,0-20-7.62-20-18,0-10.61,8-18.13,20.21-18.13S83.93,55.41,84.17,66ZM47.94,216V100.06H80V216h-32ZM104,100.06h28.58l2.36,12.55C139.67,105.05,152.63,96,172,96c23.62,0,39.95,13.78,39.95,47.77V216H180v-67.1c0-14.87-9.2-25-22.2-25-9.92,0-18.07,6.85-20.67,13.46-.94,2.35-1.18,5.66-1.18,9V216H104V100.06Z" fill="#fff"/>
+    </g>
+  </g>
 </svg>

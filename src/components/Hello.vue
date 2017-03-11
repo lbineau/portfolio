@@ -1,8 +1,8 @@
 <template>
   <nav class="hello">
-    <a href="https://github.com/lbineau/" title="go to Github"><img src="../assets/icons/github.svg" alt="Github logo"></a>
-    <a href="https://www.linkedin.com/in/lbineau/" title="go to LinkedIn"><img src="../assets/icons/linkedin.svg" alt="LinkedIn logo"></a>
-    <a href="https://codepen.io/lbineau/" title="go to Codepen"><img src="../assets/icons/codepen.svg" alt="Codepen logo"></a>
+    <a href="https://github.com/lbineau/" title="go to Github"><img src="../assets/icons/github.svg" alt="Github logo" width="250" height="250"></a>
+    <a href="https://codepen.io/lbineau/" title="go to Codepen"><img src="../assets/icons/codepen.svg" alt="Codepen logo" width="250" height="250"></a>
+    <a href="https://www.linkedin.com/in/lbineau/" title="go to LinkedIn"><img src="../assets/icons/linkedin.svg" alt="LinkedIn logo" width="250" height="250"></a>
   </nav>
 </template>
 
@@ -32,5 +32,6 @@ img {
   transition: box-shadow 0.3s ease-in-out;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   max-width: 100%;
+  height: auto;
 }
 </style>
