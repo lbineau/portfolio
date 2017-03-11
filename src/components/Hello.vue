@@ -1,7 +1,8 @@
 <template>
   <nav class="hello">
-    <a href="https://github.com/lbineau/"><img src="../assets/icons/github.svg" alt="Github"></a>
-    <a href="https://www.linkedin.com/in/lbineau/"><img src="../assets/icons/linkedin.svg" alt="LinkedIn"></a>
+    <a href="https://github.com/lbineau/" title="go to Github"><img src="../assets/icons/github.svg" alt="Github logo"></a>
+    <a href="https://www.linkedin.com/in/lbineau/" title="go to LinkedIn"><img src="../assets/icons/linkedin.svg" alt="LinkedIn logo"></a>
+    <a href="https://codepen.io/lbineau/" title="go to Codepen"><img src="../assets/icons/codepen.svg" alt="Codepen logo"></a>
   </nav>
 </template>
 
