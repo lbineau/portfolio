@@ -6,9 +6,9 @@
 
 <script>
 export default {
-  transition (to, from) {
-    if (!from) return 'slide-left'
-    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
+  transition: {
+    name: 'page',
+    mode: 'in-out'
   }
 }
 </script>
@@ -145,14 +145,14 @@ img {
   max-width: 100%;
 }
 
-.slide-left-enter,
-.slide-right-leave-active {
-  opacity: 0;
-  transform: translate(30px, 0);
+.page-enter-active {
+  transition: opacity .5s ease;
 }
-.slide-left-leave-active,
-.slide-right-enter {
+
+.page-leave-active {
+  transition: opacity 0s;
+}
+.page-enter, .page-leave-to {
   opacity: 0;
-  transform: translate(-30px, 0);
 }
 </style>

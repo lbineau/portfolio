@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <div class="portfolio-detail">
-      <a href="/" class="button button--back button--grey">&larr;&nbsp;Go back</a>
+      <nuxt-link to="/" class="button button--back button--grey">&larr;&nbsp;Go back</nuxt-link>
       <h1 class="title" v-text="name"></h1>
       <h2 class="subtitle" v-html="description"></h2>
       <p class="cta" v-if="link">
