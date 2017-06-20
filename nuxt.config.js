@@ -8,7 +8,7 @@ const portfolio = [
   {
     id: 'lapraille',
     name: 'La Praille',
-    description: 'Interactive SVG map for a mall<br/><span class="technos">VueJS / webpack</span>'
+    description: 'Interactive SVG map for a mall<br/><span class="technos">VueJS / webpack / webservices</span>'
   },
   {
     id: 'reference',

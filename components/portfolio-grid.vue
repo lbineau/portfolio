@@ -60,7 +60,6 @@ export default {
     img {
       position: relative;
       display: block;
-      min-height: 100%;
       max-width: 100%;
       opacity: 0.8;
     }
@@ -73,6 +72,10 @@ export default {
       backface-visibility: hidden;
       text-shadow: 0.075em 0.08em 0.1em rgba(0, 0, 0, .5);
       background: rgba(0, 0, 0, .2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
 
     figcaption::before,
@@ -138,7 +141,6 @@ export default {
     }
 
     h3 {
-      padding-top: 30%;
       transition: transform 0.35s;
       transform: translate3d(0,-20px,0);
     }
