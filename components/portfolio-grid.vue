@@ -110,10 +110,11 @@ export default {
     }
 
     img {
-      transform: scale(1.1);
+      transform: scale(1.1) translateZ(0);
       transition: opacity 0.35s, filter 0.5s;
       position: relative;
       z-index: -1;
+      will-change: filter;
     }
 
     figcaption::before,
