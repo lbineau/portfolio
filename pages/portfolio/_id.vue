@@ -1,9 +1,11 @@
 <template>
   <section class="container">
-    <div>
+    <div class="portfolio-detail">
+      <a href="/" class="button button--back button--grey">&larr;&nbsp;Go back</a>
       <h1 class="title" v-text="name"></h1>
-      <p v-if="link">
-        <a :href="link" target="_blank">Discover {{ name }}</a>
+      <h2 class="subtitle" v-html="description"></h2>
+      <p class="cta" v-if="link">
+        <a class="button button--blue" :href="link" target="_blank">Discover {{ name }}</a>
       </p>
       <div class="portfolio-images">
         <img :src="item" v-for="item in portfolioImages" :alt="`Screenshot of '${name}' project`">
@@ -29,41 +31,38 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.container
-{
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.title
-{
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-.subtitle
-{
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-.links
-{
-  padding-top: 15px;
-}
-.portfolio-images {
-  img {
-    display: block;
-    max-width: 100%;
-    padding: 1.5em 3em;
+<style lang="scss">
+.portfolio-detail {
+  .button--back {
+    font-size: 0.7em;
+    @media (min-width: 32em) {
+      float: left;
+      clear: right;
+      margin: 1rem 3rem;
+    }
+  }
+  .title {
+    clear: left;
+  }
+  .subtitle {
+    .technos {
+      font-style: italic;
+    }
+  }
+  .portfolio-images {
+    margin: 1em auto;
+    @media (min-width: 32em) {
+      margin: 2em auto;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      padding: 1em 1em;
+      margin: 0 auto;
+      @media (min-width: 32em) {
+        padding: 1.5em 3em;
+      }
+    }
   }
 }
 </style>

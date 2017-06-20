@@ -1,8 +1,27 @@
 const portfolio = [
-  { id: 'overseas', name: 'Overseas', link: 'http://overseas.vacheron-constantin.com' },
-  { id: 'lapraille', name: 'La Praille' },
-  { id: 'reference', name: 'Référence 57260', link: 'http://reference57260.vacheron-constantin.com' },
-  { id: 'harmony', name: 'Harmony', link: 'http://harmony.vacheron-constantin.com' },
+  {
+    id: 'overseas',
+    name: 'Overseas',
+    description: 'Website for Overseas tour with Steve&nbsp;McCurry<br/><span class="technos">VueJS / prerendering</span>',
+    link: 'http://overseas.vacheron-constantin.com'
+  },
+  {
+    id: 'lapraille',
+    name: 'La Praille',
+    description: 'Interactive SVG map for a mall<br/><span class="technos">VueJS / webpack</span>'
+  },
+  {
+    id: 'reference',
+    name: 'Référence 57260',
+    description: 'Website for the most complicated watch of the world<br/><span class="technos">Riot</span>',
+    link: 'http://reference57260.vacheron-constantin.com'
+  },
+  {
+    id: 'harmony',
+    name: 'Harmony',
+    description: 'Website for the new Harmony collection<br/><span class="technos">Riot / PixiJS / SVG</span>',
+    link: 'http://harmony.vacheron-constantin.com'
+  },
 ]
 module.exports = {
   /*
@@ -26,8 +45,8 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: false,
-  // loading: { color: '#3B8070' },
+  // loading: false,
+  loading: { color: '#3B8070' },
   /*
   ** Build configuration
   */

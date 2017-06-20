@@ -4,6 +4,7 @@ export function portfolioImages (id) {
   return req.keys()
   // filter them by folder name (simple check if path contains album name)
   .filter(item => item.includes(`/${id}/`))
+  .filter(item => !item.includes(`thumb`))
   // return an Array of require items
   .map(item => req(item))
 }

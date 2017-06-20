@@ -7,7 +7,7 @@
             <img :src="getThumb(item.id)" :alt="item.id"/>
             <figcaption>
               <h3 v-text="item.name"></h3>
-              <p>Bubba likes to appear out of thin air.</p>
+              <p v-html="item.description"></p>
             </figcaption>
           </figure>
         </nuxt-link>
@@ -90,6 +90,7 @@ export default {
 
     h3 {
       font-weight: bold;
+      font-size: 1.3em;
     }
 
     h3,
@@ -100,6 +101,9 @@ export default {
     p {
       letter-spacing: 1px;
       font-size: 68.5%;
+      .technos {
+        font-weight: bold;
+      }
     }
 
     img {

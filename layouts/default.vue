@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 html
 {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -30,14 +30,57 @@ html
   box-sizing: border-box;
   margin: 0;
 }
-.links {
+.container
+{
+  min-height: 100vh;
   display: flex;
-  margin: 1em auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.title
+{
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  display: block;
+  font-weight: 300;
+  font-size: 3em;
+  line-height: 1;
+  color: #35495e;
+  letter-spacing: 1px;
+  margin: 0.3em auto;
+  small {
+    font-size: 0.6em;
+  }
+  @media (min-width: 32em) {
+    font-size: 5em;
+  }
+}
+.subtitle
+{
+  font-weight: 300;
+  font-size: 2em;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+  @media (min-width: 32em) {
+    font-size: 2.5em;
+  }
+}
+.links
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 15px;
   align-items: center;
   justify-content: center;
+  @media (min-width: 32em) {
+    flex-direction: row;
+  }
 }
 .button {
-  padding: 10px 30px;
+  display: inline-block;
+  padding: 0.625em 1.875em;
   margin: 1em 0.5em;
   border-radius: 4px;
   text-decoration: none;
@@ -45,7 +88,6 @@ html
 }
 .cta {
   display: inline-block;
-  font-size: 2em;
   margin: 1em 0.5em;
 }
 .button--orange
@@ -97,6 +139,10 @@ html
 {
   color: #fff;
   background-color: black;
+}
+
+img {
+  max-width: 100%;
 }
 
 .slide-left-enter,
