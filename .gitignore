@@ -1,6 +1,11 @@
-.DS_Store
-node_modules/
-dist/
+# dependencies
+node_modules
+
+# logs
 npm-debug.log
-yarn-error.log
-.vscode
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
