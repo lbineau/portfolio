@@ -1,3 +1,9 @@
+const portfolio = [
+  { id: 'overseas', name: 'Overseas', link: 'http://overseas.vacheron-constantin.com' },
+  { id: 'lapraille', name: 'La Praille' },
+  { id: 'reference', name: 'Référence 57260', link: 'http://reference57260.vacheron-constantin.com' },
+  { id: 'harmony', name: 'Harmony', link: 'http://harmony.vacheron-constantin.com' },
+]
 module.exports = {
   /*
   ** Headers of the page
@@ -15,12 +21,7 @@ module.exports = {
     ]
   },
   env: {
-    portfolio: [
-      { id: 'overseas', name: 'Overseas', link: 'http://overseas.vacheron-constantin.com' },
-      { id: 'lapraille', name: 'La Praille' },
-      { id: 'reference', name: 'Référence 57260', link: 'http://reference57260.vacheron-constantin.com' },
-      { id: 'harmony', name: 'Harmony', link: 'http://harmony.vacheron-constantin.com' },
-    ]
+    portfolio: portfolio
   },
   /*
   ** Customize the progress-bar color
@@ -43,6 +44,11 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    }
+  },
+  generate: {
+    routes: function () {
+      return portfolio.map((item) => `/portfolio/${item.id}`)
     }
   }
 }
