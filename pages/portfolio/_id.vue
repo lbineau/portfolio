@@ -7,6 +7,9 @@
       <p class="cta" v-if="link">
         <a class="button button--blue" :href="link" target="_blank">Discover {{ name }}</a>
       </p>
+      <div class="portfolio-video" v-if="video">
+        <iframe :src="video" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
       <div class="portfolio-images">
         <img :src="item" v-for="item in portfolioImages" :alt="`Screenshot of '${name}' project`">
       </div>
@@ -47,6 +50,27 @@ export default {
   .subtitle {
     .technos {
       font-style: italic;
+    }
+  }
+  .portfolio-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: percentage(9/16);
+    > iframe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1em 1em;
+      margin: 0 auto;
+      @media (min-width: 32em) {
+        padding: 1.5em 3em;
+      }
     }
   }
   .portfolio-images {
