@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import PortfolioGrid from '~components/portfolio-grid.vue'
+import PortfolioGrid from '~/components/portfolio-grid.vue'
 
 export default {
   components: {
