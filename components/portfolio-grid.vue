@@ -121,7 +121,7 @@ export default {
     }
 
     img {
-      transform: scale(1.1) translateZ(0);
+      transform: translateZ(0);
       transition: opacity 0.5s linear;
       position: relative;
       z-index: -1;
