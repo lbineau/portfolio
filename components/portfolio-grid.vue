@@ -1,10 +1,11 @@
 <template>
   <nav class="portfolio-grid">
     <ul>
-      <li v-for="item in items">
+      <li v-for="item in items" :key="item.id">
         <nuxt-link :to="'/portfolio/' + item.id">
           <figure class="effect-bubba">
             <img :src="getThumb(item.id)" :alt="item.id"/>
+            <img class="over" :src="getThumb(item.id)" :alt="item.id"/>
             <figcaption>
               <h3 v-text="item.name"></h3>
               <p v-html="item.description"></p>
@@ -61,7 +62,17 @@ export default {
       position: relative;
       display: block;
       max-width: 100%;
-      opacity: 0.8;
+      opacity: 1;
+      filter: opacity(80%);
+      &.over {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        filter: blur(3px) opacity(80%);
+      }
     }
 
     figcaption {
@@ -111,10 +122,13 @@ export default {
 
     img {
       transform: scale(1.1) translateZ(0);
-      transition: opacity 0.35s, filter 0.5s;
+      transition: opacity 0.5s linear;
       position: relative;
       z-index: -1;
-      will-change: filter;
+      will-change: opacity;
+      &.over {
+        transition: opacity 0.5s linear;
+      }
     }
 
     figcaption::before,
@@ -159,7 +173,10 @@ export default {
     overflow: hidden;
     &:hover, &:focus {
       img {
-        filter: blur(3px);
+        opacity: 0;
+      }
+      img.over {
+        opacity: 1;
       }
       figcaption::before,
       figcaption::after {
