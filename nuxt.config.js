@@ -3,8 +3,9 @@ const portfolio = [
     id: 'overseas',
     name: 'Overseas',
     description: 'Website for Overseas tour with Steve&nbsp;McCurry<br/><span class="technos">VueJS / prerendering</span>',
-    link: 'http://overseas.vacheron-constantin.com',
-    video: 'https://player.vimeo.com/video/222407545'
+    link: 'https://www.blue-infinity.com/our-work/digital-craftsmanship-vacheron-constantin',
+    video: 'https://player.vimeo.com/video/222407545',
+    video2: 'https://www.youtube.com/embed/XWwmvA8TaJY'
   },
   {
     id: 'lapraille',
@@ -26,7 +27,7 @@ const portfolio = [
     description: 'Website for the new Harmony collection<br/><span class="technos">Riot / PixiJS / SVG</span>',
     link: 'http://harmony.vacheron-constantin.com',
     video: 'https://player.vimeo.com/video/222409054'
-  },
+  }
 ]
 module.exports = {
   /*

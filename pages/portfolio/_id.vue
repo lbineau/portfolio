@@ -10,8 +10,11 @@
       <div class="portfolio-video" v-if="video">
         <iframe :src="video" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
+      <div class="portfolio-video" v-if="video2">
+        <iframe :src="video2" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
       <div class="portfolio-images">
-        <img :src="item" v-for="item in portfolioImages" :alt="`Screenshot of '${name}' project`">
+        <img :src="item" v-for="(item, idx) in portfolioImages" :key="idx" :alt="`Screenshot of '${name}' project`">
       </div>
     </div>
   </section>
