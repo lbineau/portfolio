@@ -1,5 +1,13 @@
 const portfolio = [
   {
+    id: 'nespresso-careers',
+    name: 'Nespresso Careers',
+    description: 'Website for Nespresso recruitment<br/><span class="technos">VueJS / Nuxt / Puppeteer</span>',
+    link: 'https://www.nespresso.com/careers/',
+    video: null,
+    video2: null
+  },
+  {
     id: 'overseas',
     name: 'Overseas',
     description: 'Website for Overseas tour with Steve&nbsp;McCurry<br/><span class="technos">VueJS / prerendering</span>',
@@ -12,21 +20,24 @@ const portfolio = [
     name: 'La Praille',
     description: 'Interactive SVG map for a mall<br/><span class="technos">VueJS / webpack / webservices</span>',
     link: null,
-    video: 'https://player.vimeo.com/video/222377607'
+    video: 'https://player.vimeo.com/video/222377607',
+    video2: null
   },
   {
     id: 'reference',
     name: 'Référence 57260',
     description: 'Website for the most complicated watch of the world<br/><span class="technos">Riot</span>',
     link: 'http://reference57260.vacheron-constantin.com',
-    video: null
+    video: null,
+    video2: null
   },
   {
     id: 'harmony',
     name: 'Harmony',
     description: 'Website for the new Harmony collection<br/><span class="technos">Riot / PixiJS / SVG</span>',
     link: 'http://harmony.vacheron-constantin.com',
-    video: 'https://player.vimeo.com/video/222409054'
+    video: 'https://player.vimeo.com/video/222409054',
+    video2: null
   }
 ]
 module.exports = {
