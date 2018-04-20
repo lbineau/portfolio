@@ -22,7 +22,7 @@ const portfolio = [
   {
     id: 'traces',
     name: 'Traces',
-    description: 'Augmented reality application to visualize the data of Island<br/><span class="technos">Unity / Vuforia / iOS / Android</span>',
+    description: 'Augmented reality application to visualize the data of French Antarctic and Austral Territories<br/><span class="technos">Unity / Vuforia / iOS / Android</span>',
     link: 'http://human-traces.com/#telecharger',
     videos: [
       {
