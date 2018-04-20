@@ -7,11 +7,8 @@
       <p class="cta" v-if="link">
         <a class="button button--blue" :href="link" target="_blank">Discover {{ name }}</a>
       </p>
-      <div class="portfolio-video" v-if="video">
-        <iframe :src="video" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
-      <div class="portfolio-video" v-if="video2">
-        <iframe :src="video2" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <div class="portfolio-video" v-if="videos" v-for="(video, idx) in videos" :key="idx">
+        <iframe :src="video.src" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
       <div class="portfolio-images">
         <img :src="item" v-for="(item, idx) in portfolioImages" :key="idx" :alt="`Screenshot of '${name}' project`">
@@ -25,6 +22,15 @@ import { portfolioImages } from '../../utils/utils'
 export default {
   validate ({ params }) {
     return params.id
+  },
+  data () {
+    return {
+      id: null,
+      name: null,
+      description: null,
+      link: null,
+      videos: null
+    }
   },
   asyncData ({ params, env, error }) {
     const item = env.portfolio.find((item) => String(item.id) === params.id)
