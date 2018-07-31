@@ -2,14 +2,16 @@ const portfolio = [
   {
     id: 'nespresso-careers',
     name: 'Nespresso Careers',
-    description: 'Website for Nespresso recruitment<br/><span class="technos">VueJS / Nuxt / Puppeteer</span>',
-    link: 'https://www.nespresso.com/careers/'
+    description: 'Website for Nespresso recruitment',
+    link: 'https://www.nespresso.com/careers/',
+    tools: ['VueJS', 'Nuxt', 'Puppeteer']
   },
   {
     id: 'overseas',
     name: 'Overseas',
-    description: 'Website for Overseas tour with Steve&nbsp;McCurry<br/><span class="technos">VueJS / prerendering</span>',
+    description: 'Website for Overseas tour with Steve&nbsp;McCurry',
     link: 'https://www.blue-infinity.com/our-work/digital-craftsmanship-vacheron-constantin',
+    tools: ['VueJS', 'prerendering'],
     videos: [
       {
         src: 'https://player.vimeo.com/video/222407545'
@@ -22,8 +24,9 @@ const portfolio = [
   {
     id: 'traces',
     name: 'Traces',
-    description: 'Augmented reality application to visualize the data of French Antarctic and Austral Territories<br/><span class="technos">Unity / Vuforia / iOS / Android</span>',
+    description: 'Augmented reality application to visualize the data of French Antarctic and Austral Territories',
     link: 'http://human-traces.com/#telecharger',
+    tools: ['Unity', 'Vuforia', 'iOS', 'Android'],
     videos: [
       {
         src: 'https://www.youtube.com/embed/hmigYR3B8RI'
@@ -35,6 +38,7 @@ const portfolio = [
     name: 'La Praille',
     description: 'Interactive SVG map for a mall<br/><span class="technos">VueJS / webpack / webservices</span>',
     link: null,
+    tools: ['VueJS', 'webpack', 'webservices'],
     videos: [
       {
         src: 'https://player.vimeo.com/video/222377607'
@@ -45,18 +49,27 @@ const portfolio = [
     id: 'reference',
     name: 'Référence 57260',
     description: 'Website for the most complicated watch of the world<br/><span class="technos">Riot</span>',
+    tools: ['Riot'],
     link: 'http://reference57260.vacheron-constantin.com'
   },
   {
     id: 'harmony',
     name: 'Harmony',
     description: 'Website for the new Harmony collection<br/><span class="technos">Riot / PixiJS / SVG</span>',
+    tools: ['Riot', 'PixiJS', 'SVG'],
     link: 'http://harmony.vacheron-constantin.com',
     videos: [
       {
         src: 'https://player.vimeo.com/video/222409054'
       }
     ]
+  },
+  {
+    id: 'sunstar-gum',
+    name: 'Sunstar GUM',
+    description: 'New Website for Sunstar GUM',
+    tools: ['AEM', 'VueJS'],
+    link: 'https://www.sunstargum.com/'
   }
 ]
 module.exports = {

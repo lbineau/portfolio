@@ -3,14 +3,17 @@
     <div class="portfolio-detail">
       <nuxt-link to="/" class="button button--back button--grey">&larr;&nbsp;Go back</nuxt-link>
       <h1 class="title" v-text="name"></h1>
-      <h2 class="subtitle" v-html="description"></h2>
+      <h2 class="subtitle">
+        <span v-html="description"></span><br/>
+        <span class="technos" v-if="tools" v-html="tools.join(' / ')"></span>
+      </h2>
       <p class="cta" v-if="link">
         <a class="button button--blue" :href="link" target="_blank">Discover {{ name }}</a>
       </p>
-      <div class="portfolio-video" v-if="videos" v-for="(video, idx) in videos" :key="idx">
-        <iframe :src="video.src" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
       <div class="portfolio-images">
+        <div class="portfolio-video" v-if="videos" v-for="(video, idx) in videos" :key="idx">
+          <iframe :src="video.src" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
         <img :src="item" v-for="(item, idx) in portfolioImages" :key="idx" :alt="`Screenshot of '${name}' project`">
       </div>
     </div>
@@ -28,6 +31,7 @@ export default {
       id: null,
       name: null,
       description: null,
+      tools: null,
       link: null,
       videos: null
     }
@@ -65,7 +69,6 @@ export default {
     position: relative;
     width: 100%;
     height: 0;
-    overflow: hidden;
     padding-bottom: percentage(9/16);
     > iframe {
       position: absolute;
@@ -75,26 +78,30 @@ export default {
       left: 0;
       width: 100%;
       height: 100%;
-      padding: 1em 1em;
       margin: 0 auto;
-      @media (min-width: 32em) {
-        padding: 1.5em 3em;
-      }
+      box-shadow: 0px 0px 100px -5px rgba(100, 100, 100, 0.3);
     }
   }
   .portfolio-images {
     margin: 1em auto;
+    padding: 0 1em;
     @media (min-width: 32em) {
-      margin: 2em auto;
+      margin: 3em auto;
+      padding: 0 3em;
     }
+    * + * {
+      margin-top: 2em;
+      @media (min-width: 32em) {
+        margin-top: 5em;
+      }
+    }
+    iframe,
     img {
       display: block;
       max-width: 100%;
-      padding: 1em 1em;
-      margin: 0 auto;
-      @media (min-width: 32em) {
-        padding: 1.5em 3em;
-      }
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0px 0px 100px -5px rgba(100, 100, 100, 0.3);
     }
   }
 }
