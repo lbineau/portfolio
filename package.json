@@ -5,8 +5,8 @@
   "author": "Lory Bineau <lory.bineau@b-i.com>",
   "private": true,
   "dependencies": {
-    "nuxt": "^1.4.0",
-    "sass-loader": "^6.0.6"
+    "nuxt": "^1.4.2",
+    "sass-loader": "^6.0.7"
   },
   "scripts": {
     "dev": "nuxt",
@@ -22,8 +22,8 @@
     "eslint-config-standard": "^6.2.1",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^2.0.0",
-    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^2.0.1",
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.9.3"
   }
 }
