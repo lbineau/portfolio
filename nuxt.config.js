@@ -84,6 +84,7 @@ const portfolio = [
     link: 'https://www.sunstargum.com/'
   }
 ]
+
 module.exports = {
   /*
   ** Headers of the page
@@ -104,19 +105,18 @@ module.exports = {
     portfolio: portfolio
   },
   /*
-  ** Customize the progress-bar color
+  ** Customize the progress bar color
   */
-  // loading: false,
   loading: { color: '#3B8070' },
   /*
   ** Build configuration
   */
   build: {
     /*
-    ** Run ESLINT on save
+    ** Run ESLint on save
     */
-    extend (config, ctx) {
-      if (ctx.isClient) {
+    extend (config, { isDev, isClient }) {
+      if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -132,3 +132,4 @@ module.exports = {
     }
   }
 }
+
