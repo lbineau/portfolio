@@ -5,7 +5,7 @@
   "author": "Lory Bineau <lory.bineau@b-i.com>",
   "private": true,
   "dependencies": {
-    "nuxt": "^1.4.2",
+    "nuxt": "^1.4.5",
     "sass-loader": "^6.0.7"
   },
   "scripts": {
