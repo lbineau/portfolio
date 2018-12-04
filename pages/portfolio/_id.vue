@@ -11,10 +11,10 @@
         <a class="button button--blue" :href="link" target="_blank">Discover {{ name }}</a>
       </p>
       <div class="portfolio-images">
-        <div class="portfolio-video" v-if="videos" v-for="(video, idx) in videos" :key="idx">
+        <div class="portfolio-video" v-if="videos" v-for="(video, idx) in videos" :key="`video-${idx}`">
           <iframe :src="video.src" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
-        <img :src="item" v-for="(item, idx) in portfolioImages" :key="idx" :alt="`Screenshot of '${name}' project`">
+        <img :src="item" v-for="(item, idx) in portfolioImages" :key="`image-${idx}`" :alt="`Screenshot of '${name}' project`">
       </div>
     </div>
   </section>
@@ -22,19 +22,20 @@
 
 <script>
 import { portfolioImages } from '../../utils/utils'
+const defaultData = {
+  id: null,
+  name: null,
+  description: null,
+  tools: null,
+  link: null,
+  videos: null
+}
 export default {
   validate ({ params }) {
     return params.id
   },
   data () {
-    return {
-      id: null,
-      name: null,
-      description: null,
-      tools: null,
-      link: null,
-      videos: null
-    }
+    return defaultData
   },
   asyncData ({ params, env, error }) {
     const item = env.portfolio.find((item) => String(item.id) === params.id)
@@ -42,7 +43,11 @@ export default {
       return error({ message: 'Portfolio item not found', statusCode: 404 })
     }
     item.portfolioImages = portfolioImages(item.id)
-    return item
+    console.log(item)
+    return {
+      ...defaultData,
+      ...item
+    }
   }
 }
 </script>
