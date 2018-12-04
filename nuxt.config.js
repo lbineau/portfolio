@@ -48,7 +48,7 @@ const portfolio = [
   {
     id: 'lapraille',
     name: 'La Praille',
-    description: 'Interactive SVG map for a mall<br/><span class="technos">VueJS / webpack / webservices</span>',
+    description: 'Interactive SVG map for a mall',
     link: null,
     tools: ['VueJS', 'webpack', 'webservices'],
     videos: [
@@ -60,14 +60,14 @@ const portfolio = [
   {
     id: 'reference',
     name: 'Référence 57260',
-    description: 'Website for the most complicated watch of the world<br/><span class="technos">Riot</span>',
+    description: 'Website for the most complicated watch of the world',
     tools: ['Riot'],
     link: 'http://reference57260.vacheron-constantin.com'
   },
   {
     id: 'harmony',
     name: 'Harmony',
-    description: 'Website for the new Harmony collection<br/><span class="technos">Riot / PixiJS / SVG</span>',
+    description: 'Website for the new Harmony collection',
     tools: ['Riot', 'PixiJS', 'SVG'],
     link: 'http://harmony.vacheron-constantin.com',
     videos: [

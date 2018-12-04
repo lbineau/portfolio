@@ -8,7 +8,10 @@
             <img class="over" :src="getThumb(item.id)" :alt="item.id"/>
             <figcaption>
               <h3 v-text="item.name"></h3>
-              <p v-html="item.description"></p>
+              <p>
+                <span v-html="item.description"></span><br/>
+                <span class="technos" v-if="item.tools" v-html="item.tools.join(' / ')"></span>
+              </p>
             </figcaption>
           </figure>
         </nuxt-link>
