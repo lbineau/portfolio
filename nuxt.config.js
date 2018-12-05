@@ -126,6 +126,9 @@ module.exports = {
       }
     }
   },
+  plugins: [
+    '~/plugins/vue-in-viewport'
+  ],
   generate: {
     routes: function () {
       return portfolio.map((item) => `/portfolio/${item.id}`)

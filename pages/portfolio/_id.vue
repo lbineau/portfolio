@@ -11,10 +11,10 @@
         <a class="button button--blue" :href="link" target="_blank">Discover {{ name }}</a>
       </p>
       <div class="portfolio-images">
-        <div class="portfolio-video" v-if="videos" v-for="(video, idx) in videos" :key="`video-${idx}`">
+        <div v-in-viewport.once="-50" class="portfolio-video" v-if="videos" v-for="(video, idx) in videos" :key="`video-${idx}`">
           <iframe :src="video.src" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
-        <img :src="item" v-for="(item, idx) in portfolioImages" :key="`image-${idx}`" :alt="`Screenshot of '${name}' project`">
+        <img v-in-viewport.once="-50" :src="item" v-for="(item, idx) in portfolioImages" :key="`image-${idx}`" :alt="`Screenshot of '${name}' project`">
       </div>
     </div>
   </section>
@@ -107,6 +107,17 @@ export default {
       margin-left: auto;
       margin-right: auto;
       box-shadow: 0px 0px 100px -5px rgba(100, 100, 100, 0.3);
+    }
+    > * {
+      transition: opacity .8s cubic-bezier(.165,.84,.44,1),transform 1.2s cubic-bezier(.165,.84,.44,1);
+      &:not(.in-viewport) {
+        opacity: 0;
+        transform: translateY(80px) rotateX(20deg) rotateY(-20deg) translateZ(0);
+      }
+      &.in-viewport {
+        opacity: 1;
+        transform: none;
+      }
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <nav class="portfolio-grid">
     <ul>
-      <li v-for="item in items" :key="`portfolio-item-${item.id}`">
+      <li v-for="item in items" v-in-viewport.once="-50" :key="`portfolio-item-${item.id}`">
         <nuxt-link :to="'/portfolio/' + item.id">
           <figure class="effect-bubba">
             <img :src="getThumb(item.id)" :alt="item.id"/>
@@ -55,6 +55,15 @@ export default {
     max-width: 480px;
     max-height: 360px;
     width: 48%;
+    transition: opacity .8s cubic-bezier(.165,.84,.44,1),transform 1.2s cubic-bezier(.165,.84,.44,1);
+    &:not(.in-viewport) {
+      opacity: 0;
+      transform: translateY(80px) rotateX(20deg) rotateY(-20deg) translateZ(0);
+    }
+    &.in-viewport {
+      opacity: 1;
+      transform: none;
+    }
   }
   figure {
     position: relative;
@@ -119,7 +128,11 @@ export default {
       letter-spacing: 1px;
       font-size: 68.5%;
       .technos {
+        display: none;
         font-weight: bold;
+        @media (min-width: 32em) {
+          display: block;
+        }
       }
     }
 
