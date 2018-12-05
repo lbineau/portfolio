@@ -1,7 +1,7 @@
 <template>
   <nav class="portfolio-grid">
     <ul>
-      <li v-for="item in items" v-in-viewport.once="-50" :key="`portfolio-item-${item.id}`">
+      <li v-for="item in items" v-in-viewport="-50" :key="`portfolio-item-${item.id}`">
         <nuxt-link :to="'/portfolio/' + item.id">
           <figure class="effect-bubba">
             <img :src="getThumb(item.id)" :alt="item.id"/>

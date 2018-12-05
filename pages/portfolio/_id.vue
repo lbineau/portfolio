@@ -11,10 +11,10 @@
         <a class="button button--blue" :href="link" target="_blank">Discover {{ name }}</a>
       </p>
       <div class="portfolio-images">
-        <div v-in-viewport.once="-50" class="portfolio-video" v-if="videos" v-for="(video, idx) in videos" :key="`video-${idx}`">
+        <div v-in-viewport="-100" class="portfolio-video" v-if="videos" v-for="(video, idx) in videos" :key="`video-${idx}`">
           <iframe :src="video.src" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
-        <img v-in-viewport.once="-50" :src="item" v-for="(item, idx) in portfolioImages" :key="`image-${idx}`" :alt="`Screenshot of '${name}' project`">
+        <img v-in-viewport="-100" :src="item" v-for="(item, idx) in portfolioImages" :key="`image-${idx}`" :alt="`Screenshot of '${name}' project`">
       </div>
     </div>
   </section>

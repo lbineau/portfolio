@@ -6,10 +6,6 @@
 
 <script>
 export default {
-  transition: {
-    name: 'page',
-    mode: 'in-out'
-  }
 }
 </script>
 
