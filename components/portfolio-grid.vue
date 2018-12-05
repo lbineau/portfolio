@@ -55,14 +55,14 @@ export default {
     max-width: 480px;
     max-height: 360px;
     width: 48%;
-    transition: opacity .8s cubic-bezier(.165,.84,.44,1),transform 1.2s cubic-bezier(.165,.84,.44,1);
-    &:not(.in-viewport) {
-      opacity: 0;
-      transform: translateY(80px) rotateX(20deg) rotateY(-20deg) translateZ(0);
-    }
-    &.in-viewport {
-      opacity: 1;
-      transform: none;
+    // only for javascript version
+    #__nuxt:not([data-server-rendered="true"]) & {
+      animation-fill-mode: backwards;
+      animation: scroll-appear 1.2s cubic-bezier(.165,.84,.44,1);
+      animation-play-state: paused;
+      &.in-viewport {
+        animation-play-state: running;
+      }
     }
   }
   figure {
