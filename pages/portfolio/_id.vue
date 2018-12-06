@@ -43,7 +43,6 @@ export default {
       return error({ message: 'Portfolio item not found', statusCode: 404 })
     }
     item.portfolioImages = portfolioImages(item.id)
-    console.log(item)
     return {
       ...defaultData,
       ...item
