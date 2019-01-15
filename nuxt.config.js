@@ -133,6 +133,9 @@ module.exports = {
     routes: function () {
       return portfolio.map((item) => `/portfolio/${item.id}`)
     }
-  }
+  },
+  modules: [
+    '@nuxtjs/pwa'
+  ]
 }
 
