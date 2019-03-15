@@ -14,18 +14,21 @@
         <a href="/media/lory-bineau_CV_2018.pdf" target="_blank" class="button button--black">C.V.(pdf)</a>
       </div>
       <PortfolioGrid :items="portfolio"></PortfolioGrid>
+      <CodepenGrid/>
     </div>
   </section>
 </template>
 
 <script>
 import PortfolioGrid from '~/components/portfolio-grid.vue'
+import CodepenGrid from '~/components/codepen-grid.vue'
 
 export default {
   components: {
-    PortfolioGrid
+    PortfolioGrid,
+    CodepenGrid
   },
-  asyncData ({ params, env, error }) {
+  async asyncData ({ params, env, error }) {
     return {
       portfolio: env.portfolio
     }

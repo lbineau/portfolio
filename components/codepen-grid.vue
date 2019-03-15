@@ -1,44 +1,41 @@
 <template>
-  <nav class="portfolio-grid">
-    <ul>
-      <li v-for="item in items" v-in-viewport="-50" :key="`portfolio-item-${item.id}`">
-        <nuxt-link :to="'/portfolio/' + item.id">
+  <div class="grid">
+    <ul v-if="items.length > 0">
+      <li v-for="{id, title, images, views, link} in items" :key="id" v-in-viewport="-50">
+        <a :href="link" target="_blank">
           <figure>
-            <img :src="getThumb(item.id)" :alt="item.id"/>
-            <img class="over" :src="getThumb(item.id)" :alt="item.id"/>
+            <img :src="images.large" :alt="title"/>
+            <img class="over" :src="images.large" :alt="title"/>
             <figcaption>
-              <h3 v-text="item.name"></h3>
+              <h3 v-html="title"></h3>
               <p>
-                <span v-html="item.description"></span><br/>
-                <span class="technos" v-if="item.tools" v-html="item.tools.join(' / ')"></span>
+                <span v-if="views" v-html="views"></span>
               </p>
             </figcaption>
           </figure>
-        </nuxt-link>
+        </a>
       </li>
     </ul>
-  </nav>
+  </div>
 </template>
-
 <script>
 export default {
-  props: {
-    items: {
-      type: Array,
-      required: true
+  data () {
+    return {
+      items: []
     }
   },
-  methods: {
-    getThumb (id) {
-      return require(`~/assets/portfolio/${id}/thumb.jpg`)
-    }
+  async mounted () {
+    const response = await fetch('https://cpv2api.com/pens/showcase/lbineau')
+    const { data } = await response.json()
+    this.items = [...data]
   }
 }
 </script>
 
 <style lang="scss">
-.portfolio-grid {
-  margin: 2em auto 0 auto;
+.grid {
+  margin: 0 auto 0 auto;
   max-width: 80em;
   ul {
     list-style: none;
